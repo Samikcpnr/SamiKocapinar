@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 
 <head>
@@ -7,268 +7,91 @@
     <title>Sami Kocapınar - Staj Deneyimleri</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-       body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333333;
-    overflow: hidden;
-}
+    
+    <script>
+        document.getElementById('profile-icon').addEventListener('click', function() {
+            var leftColumn = document.querySelector('.left');
+            if (leftColumn.style.display === 'none' || leftColumn.style.display === '') {
+                leftColumn.style.display = 'block';
+            } else {
+                leftColumn.style.display = 'none';
+            }
+        });
+   
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('open');
+        }
+    </script>
 
-.header {
-    background-color: #00796b;
-    padding: 10px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-}
-
-.menu-toggle {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1001;
-    color: #ffffff;
-}
-
-.menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #f0f0f0;
-    width: 300px;
-    height: 100%;
-    padding: 30px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    z-index: 1000;
-}
-
-.menu.open {
-    display: block;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu ul li {
-    margin-bottom: 10px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #00796b;
-}
-
-.left {
-    width: 20%;
-    text-align: center;
-    background-color: #f0f0f0;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    position: relative;
-    border-right: 2px solid #00796b;
-    transition: transform 0.3s ease;
-}
-
-.left.hidden {
-    transform: translateX(-100%);
-}
-
-.profile-icon {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    font-size: 60px;
-    color: #00796b;
-    cursor: pointer;
-}
-
-.profile-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.container {
-    display: flex;
-    height: calc(100vh - 60px);
-    overflow: hidden;
-}
-
-.social-icons {
-    text-align: center;
-    margin-top: 270px;
-}
-
-.social-icons a {
-    margin: 0 20px;
-    text-decoration: none;
-    font-size: 30px;
-    color: #00796b;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #004d40;
-}
-
-.left .profile-wrapper {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.left .profile-wrapper img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.left .profile-wrapper img:hover {
-    transform: scale(1.05);
-}
-
-.left p {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-    position: relative;
-}
-
-.contact {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #00796b;
-}
-
-.contact a {
-    text-decoration: none;
-    color: #00796b;
-    font-weight: bold;
-}
-
-.contact a:hover {
-    color: #004d40;
-}
-
-.right {
-    width: 80%;
-    padding: 20px;
-    overflow-y: auto;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.right h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.right p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #00796b;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-@media (max-width: 500px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (min-width: 501px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .menu.open {
-        display: block;
-    }
-}
-
-    </style>
-</head>
-
-<body>
-    <header>
-        <div class="header">
-            <span class="menu-toggle" onclick="toggleMenu()">☰</span> Sami Kocapınar - Staj Deneyimleri
-        </div>
-    </header>
-
-    <nav class="menu" id="menu">
+    <div class="header">
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span> Sami Kocapınar - Staj Deneyimleri
+    </div>
+    <div class="menu" id="menu">
         <ul id="menu-list">
-            <!-- Menü öğeleri -->
+            <li><a href="#proje1">Mikrodenetleyiciler</a></li>
+            <li><a href="#proje2">Proje 2</a></li>
+            <li><a href="#proje3">Proje 3</a></li>
+            <li><a href="#proje4">Proje 4</a></li>
+            <li><a href="#proje5">Proje 5</a></li>
+            <li><a href="#proje6">Proje 6</a></li>
+            <li><a href="#proje7">Proje 7</a></li>
+            <li><a href="#proje8">Proje 8</a></li>
+            <li><a href="#proje9">Proje 9</a></li>
+            <li><a href="#proje10">Proje 10</a></li>
+            <li><a href="#proje11">Proje 11</a></li>
+            <li><a href="#proje12">Proje 12</a></li>
+            <li><a href="#proje13">Proje 13</a></li>
+            <li><a href="#proje14">Proje 14</a></li>
+            <li><a href="#proje15">Proje 15</a></li>
+            <li><a href="#proje16">Proje 16</a></li>
+            <li><a href="#proje17">Proje 17</a></li>
+            <li><a href="#proje18">Proje 18</a></li>
+            <li><a href="#proje19">Proje 19</a></li>
+            <li><a href="#proje20">Proje 20</a></li>
+            <li><a href="#proje21">Proje 21</a></li>
+            <li><a href="#proje22">Proje 22</a></li>
+            <li><a href="#proje23">Proje 23</a></li>
+            <li><a href="#proje24">Proje 24</a></li>
+            <li><a href="#proje25">Proje 25</a></li>
+            <li><a href="#proje26">Proje 26</a></li>
+            <li><a href="#proje27">Proje 27</a></li>
+            <li><a href="#proje28">Proje 28</a></li>
+            <li><a href="#proje29">Proje 29</a></li>
+            <li><a href="#proje30">Proje 30</a></li>
         </ul>
-    </nav>
+    </div>
 
-    <main class="container">
-        <aside class="left" id="left-column">
+    <div class="container">
+        <div class="left">
+            
+
             <div class="profile-wrapper">
-                <img src="profil_fotografi.jpg" alt="Profil Fotoğrafı" id="profile-image">
+                <img src="profil_fotografi.jpg" alt="Profil Fotoğrafı">
             </div>
             <p>Sami Kocapınar</p>
+    
             <div class="contact">
                 <p>Benimle iletişime geçmek için:</p>
                 <a href="mailto:samikcpnr@gmail.com">samikcpnr@gmail.com</a>
             </div>
+    
+            <!-- Sosyal medya ikonlarını en alta taşıdım -->
             <div class="social-icons">
-                <!-- Sosyal medya ikonları -->
+                <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+                <a href="https://linkedin.com" target="_blank" class="fab fa-linkedin"></a>
+                <a href="https://github.com" target="_blank" class="fab fa-github"></a>
+                <a href="https://youtube.com" target="_blank" class="fab fa-youtube"></a>
+                <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+                <a href="mailto:samikcpnr@gmail.com" class="fas fa-envelope"></a>
             </div>
             <div class="profile-icon" id="profile-icon">
                 <i class="fas fa-user"></i>
             </div>
-        </aside>
+        </div>
         
-        <section class="right">
+        <div class="right">
+            <!-- Sağ tarafta içerikler -->
             <h2>Motivasyonum ve Gelecek Vizyonum</h2>
             <!-- Motivasyon ve gelecek vizyonu metni -->
             <p>Teknoloji ve yazılım dünyasına olan derin sevgi ve ilgim, her gün beni daha fazla öğrenmeye ve gelişmeye teşvik ediyor. Yazılımın ve teknolojinin sunduğu sonsuz olanaklar, yaratıcı çözümler geliştirme isteğimi ve yenilikçi projelere yönelme arzumuzu artırıyor. Dijital çağın getirdiği hızlı değişim ve dönüşüm, beni sürekli olarak yeni teknolojiler ve metodolojiler hakkında bilgi edinmeye yönlendiriyor. Bu süreçte, her yeni bilgi ve beceri kazanımı, kariyerimde bir adım daha ileri gitmemi sağlıyor.
@@ -280,38 +103,70 @@
                 Staj sürecinde edindiğim bilgi ve tecrübeler, bana daha büyük bir çalışma motivasyonu kazandırdı. Teknolojinin sunduğu imkanlar doğrultusunda, ülkemizin global arenada daha güçlü bir oyuncu olması için çalışmalarımı daha da ileriye taşımak istiyorum. Bu süreç, bana daha fazla çalışma ve yenilikçi çözümler üretme isteği uyandırdı. Gelecek vizyonumda, bu yenilikleri ve fırsatları değerlendirmek, ülkemizin teknolojik ve bilimsel alanlarda daha ileriye gitmesini sağlamak en büyük hedefimdir.
                 <br><br>
                 Teknolojinin sunduğu olanakları, geçmişin izlerini geleceğe taşırken, ülkemin refahını ve gelişimini artırma amacına hizmet edecek şekilde kullanmak benim en büyük hedefimdir. Geleceğe olan inancım ve kararlılığım, beni her gün daha iyi bir versiyonum olmaya ve ülkemin daha parlak bir geleceğe ulaşması için çalışmaya teşvik ediyor.</p>
-                <p>Teknoloji ve yazılım dünyasına olan derin sevgi ve ilgim, her gün beni daha fazla öğrenmeye ve gelişmeye teşvik ediyor. Yazılımın ve teknolojinin sunduğu sonsuz olanaklar, yaratıcı çözümler geliştirme isteğimi ve yenilikçi projelere yönelme arzumuzu artırıyor. Dijital çağın getirdiği hızlı değişim ve dönüşüm, beni sürekli olarak yeni teknolojiler ve metodolojiler hakkında bilgi edinmeye yönlendiriyor. Bu süreçte, her yeni bilgi ve beceri kazanımı, kariyerimde bir adım daha ileri gitmemi sağlıyor.
-                    <br><br>
-                    Ancak, benim için çalışma motivasyonu sadece kişisel başarılarla sınırlı değil. Var olduğum topraklarda köklerimizden gelen miras, bana büyük bir sorumluluk ve ilham kaynağı sunuyor. Ecdadımızın bizlere bıraktığı değerler ve azim, ülkemizin daha iyi bir geleceğe ulaşması için çalışma isteğimi artırıyor. Geçmişin bilgi ve deneyimlerinden faydalanarak, ülkemizin teknolojik ve ekonomik gelişimine katkıda bulunmayı kendime bir görev olarak görüyorum.
-                    <br><br>
-                    Özellikle gerçekleştirdiğim staj, bu motivasyonu daha da güçlendirdi. Staj deneyimim, teknoloji alanında ülkemizdeki mevcut ve potansiyel yeniliklerin büyüklüğünü ve önemini doğrudan gözlemleme fırsatı sundu. Bu süreç, ülkemizde bu tür teknolojilerin geliştirilmesi ve uygulanması konusundaki heyecanımı artırdı. Her gün, teknoloji alanındaki bu gelişmeleri yakından takip etmek ve bu süreçte yer almak bana büyük bir ilham ve enerji verdi.
-                    <br><br>
-                    Staj sürecinde edindiğim bilgi ve tecrübeler, bana daha büyük bir çalışma motivasyonu kazandırdı. Teknolojinin sunduğu imkanlar doğrultusunda, ülkemizin global arenada daha güçlü bir oyuncu olması için çalışmalarımı daha da ileriye taşımak istiyorum. Bu süreç, bana daha fazla çalışma ve yenilikçi çözümler üretme isteği uyandırdı. Gelecek vizyonumda, bu yenilikleri ve fırsatları değerlendirmek, ülkemizin teknolojik ve bilimsel alanlarda daha ileriye gitmesini sağlamak en büyük hedefimdir.
-                    <br><br>
-                    Teknolojinin sunduğu olanakları, geçmişin izlerini geleceğe taşırken, ülkemin refahını ve gelişimini artırma amacına hizmet edecek şekilde kullanmak benim en büyük hedefimdir. Geleceğe olan inancım ve kararlılığım, beni her gün daha iyi bir versiyonum olmaya ve ülkemin daha parlak bir geleceğe ulaşması için çalışmaya teşvik ediyor.</p>
-           
-            </section>
-    </main>
+
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                
+                
+                
+                  <div id="proje1" class="project-section">
+            
+                        <h2>Mikrodenetleyiciler</h2>
+                        <p>
+                            Mikrodenetleyici (mikrodenetleyiciye İngilizcede kısaca MCU, MC, UC veya μC de denir) bir VLSI entegre devre çipinde küçük bir bilgisayar'dır. Mikrodenetleyici, bellek ve programlanabilir giriş/çıkış çevre birimleri ile birlikte bir veya daha fazla CPU (işlemci çekirdeği'ni) kapsar.
+                        </p>
+                        <p>
+                            Kısıtlı miktarda olmakla birlikte, yeterince hafıza birimlerine ve giriş – çıkış uçlarına sahip olmaları sayesinde tek başlarına çalışabildikleri gibi, donanımı oluşturan diğer elektronik devrelerle irtibat kurabilir, uygulamanın gerektirdiği fonksiyonları gerçekleştirebilirler. Üzerlerinde analog-dijital çevirici gibi tümleşik devreler barındırmaları sayesinde algılayıcılardan her türlü verinin toplanması ve işlenmesinde kullanılabilmektedirler. Ufak ve düşük maliyetli olmaları gömülü uygulamalarda tercih edilmelerini sağlamaktadır. Mikrodenetleyiciler sıradan mikroişlemcilere nazaran aşağıda listelenen 4 temel avantajları sayesinde elektronik sanayinde günümüzde oldukça büyük bir uygulama alanına sahiptirler:
+                        </p>
+                        <ul>
+                            <li>oldukça küçük boyutludurlar,</li>
+                            <li>çok düşük güç tüketimine sahiptirler,</li>
+                            <li>düşük maliyetlidirler,</li>
+                            <li>yüksek performansa sahiptirler.</li>
+                        </ul>
+                        <p>
+                            Mikrodenetleyici işlemci, bellek ve çevre birimleri ile bağımsız bir sistemdir ve gömülü sistem olarak kullanılabilir.
+                        </p>
+                        <p>
+                            Mikroişlemci, merkezi işlem birimidir. Sadece işlemleri yönetir ve karar verir fakat işlemleri gerçekleştiremez. Mikrodenetleyici ise içinde işlemci, hafıza, giriş/çıkış, rom, ram gibi birimleri taşıyan küçük yapıda bir bilgisayardır. Bundan dolayı tek başına işlemleri denetler ve gerçekleştir.
+                        </p>
+                        <p>
+                            Mikroişlemci, karmaşık sistemleri kontrol etme amaçlı kullanılırken mikrodenetleyici daha basit devrelerde tercih edilir.
+                        </p>
+                        <p>
+                            Mikroişlemcinin, programlanması karmaşıkken mikrodenetleyicinin programlanması daha basittir.
+                        </p>
+                        <p>
+                            Mikroişlemci fiyatı pahalıyken, mikrodenetleyici fiyatı oldukça düşüktür. Bu yüzden maliyet kriterlerine bakılarak basit sistemlerde denetleyici kullanılırken daha karmaşık sistemlerde ise işlemci kullanılmaktadır.
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
 
     <div class="footer">
         &copy; 2024 Sami Kocapınar
     </div>
     
-    <script>
-        document.getElementById('profile-icon').addEventListener('click', function() {
-            var leftColumn = document.getElementById('left-column');
-            if (leftColumn.style.display === 'none' || leftColumn.style.display === '') {
-                leftColumn.style.display = 'block';
-            } else {
-                leftColumn.style.display = 'none';
-            }
-        });
-
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('open');
-        }
-    </script>
 </body>
 
 </html>
