@@ -293,7 +293,7 @@ body {
 
     .left .profile-wrapper {
         position: relative; /* Konumlandırma türü */
-        width: 100px; /* Küçültülmüş profil fotoğrafı genişliği */
+        width: 150px; /* Küçültülmüş profil fotoğrafı genişliği */
         height: 100px; /* Küçültülmüş profil fotoğrafı yüksekliği */
         margin: 0 auto; /* Ortalar */
         border-radius: 50%; /* Yuvarlak yapar */
