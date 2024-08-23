@@ -31,6 +31,7 @@ body {
     z-index: 1001; /* Diğer elemanlardan üstte kalır */
     color: #FFFFFF; /* Yazı rengi */
     transition: transform 0.3s ease; /* Dönüşüm efekti */
+    transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
 }
 
 /* Menü stili */
@@ -47,14 +48,33 @@ body {
     overflow-y: auto; /* Dikey kaydırma */
     z-index: 1000; /* Diğer elemanlardan altında kalır */
     transform: translateX(100%); /* Başlangıçta menü ekran dışında */
-    transition: transform 0.3s ease-in-out; /* Dönüşüm efekti */
+    opacity: 0; /* Opaklık başlangıçta sıfır */
+    transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
+    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease; /* Efekt geçişi */
+}
+
+
+
+/* Menü butonuna fare ile gelindiğinde uygulanacak stil */
+.menu-toggle:hover {
+    color: #FFD700; /* Renk değişimi (Altın rengi) */
+    transform: scale(1.2); /* Büyüme efekti */
 }
 
 /* Menü açıldığında uygulanacak stil */
 .menu.open {
     display: block; /* Görünür hale getirir */
     transform: translateX(0); /* Menü açıldığında ekran içinde olur */
-    top: 60px; /* Üstten 60px uzaklık */
+    top: 48px; /* Üstten 48px uzaklık */
+    opacity: 1; /* Opaklık tamamen görünür */
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge */
+}
+
+/* Menü kapanırken gölge efektini azaltır */
+.menu.close {
+    transform: translateX(100%); /* Menü kapanırken ekran dışında olur */
+    opacity: 0; /* Opaklık tamamen kaybolur */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Daha az belirgin gölge */
 }
 
 /* Menü içindeki liste stili */
@@ -139,6 +159,13 @@ body {
     color: #1E88E5; /* Yazı rengi */
     cursor: pointer; /* Fare işaretçisini değiştirir */
     z-index: 1001; /* Diğer elemanlardan üstte kalır */
+    transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
+}
+
+/* Profil simgesine fare ile gelindiğinde uygulanacak stil */
+.profile-icon:hover {
+    color: #1565C0; /* Renk değişimi */
+    transform: scale(1.2); /* Büyüme efekti */
 }
 
 /* Profil simgesi içindeki resmi yuvarlak yapar */
@@ -147,6 +174,14 @@ body {
     height: 100%; /* Yükseklik */
     border-radius: 50%; /* Yuvarlak yapar */
     object-fit: cover; /* Resmi kesmeden sığdırır */
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 /* İçerik konteyneri stili */
@@ -173,12 +208,13 @@ body {
     text-decoration: none; /* Alt çizgi yok */
     font-size: 30px; /* Yazı boyutu */
     color: #1E88E5; /* Yazı rengi */
-    transition: color 0.3s, transform 0.3s ease; /* Efektler */
+    transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
 }
 
 /* Sosyal medya bağlantılarına fare ile gelindiğinde uygulanacak stil */
 .social-icons a:hover {
-    color: #1565C0; /* Yazı rengi değişir */
+    color: #1565C0; /* Renk değişimi */
+    transform: scale(1.2); /* Büyüme efekti */
 }
 
 /* Profil fotoğrafı wrapper'ı stili */
@@ -194,6 +230,7 @@ body {
     justify-content: center; /* Ortalar */
     overflow: hidden; /* Taşmayı gizler */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Gölgeler */
+    
 }
 
 /* Profil fotoğrafı içindeki resmin stili */
@@ -202,7 +239,7 @@ body {
     height: 100%; /* Yükseklik */
     border-radius: 50%; /* Yuvarlak yapar */
     object-fit: cover; /* Resmi kesmeden sığdırır */
-    transition: transform 0.3s ease; /* Efekt ekleme */
+    animation: pulse 3s infinite; /* Animasyonu ekledik */
 }
 
 /* Profil bilgileri stili */
@@ -310,6 +347,7 @@ body {
         height: 100%; /* Yükseklik tam olarak kapsayıcıya uyum sağlar */
         border-radius: 50%; /* Resmi de yuvarlak yapar */
         object-fit: cover; /* Resmi kapsayıcıya sığdırır */
+        animation: pulse 5s infinite; /* Animasyonu ekledik */
     }
 
 
@@ -323,13 +361,22 @@ body {
         display: flex; /* Görünür hale getirir */
         justify-content: center; /* Ortalar */
         margin-top: 5px; /* Üstten boşluk */
+        transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
+
     }
+
+    /* Sosyal medya bağlantılarına fare ile gelindiğinde uygulanacak stil */
+.social-icons a:hover {
+    color: #1565C0; /* Renk değişimi */
+    transform: scale(1.2); /* Büyüme efekti */
+}
 
     .left.small .social-icons a {
         font-size: 18px; /* Yazı boyutu */
     }
 
     .social-icons {
+        text-align: center;
         margin-top: -40px; /* Üstten boşluk */
     }
 
