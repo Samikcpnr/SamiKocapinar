@@ -393,6 +393,7 @@ body {
         right: 0; /* Sağ kenarda konumlandırma */
         background-color: #fff; /* Arka plan rengi */
         z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlar */
+         overflow-y: auto;
     }
 
     .menu-toggle {
