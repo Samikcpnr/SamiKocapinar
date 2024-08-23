@@ -292,44 +292,45 @@ body {
     }
 
     .left .profile-wrapper {
-        position: relative; /* Konumlandırma türü */
-        width: 150px; /* Küçültülmüş profil fotoğrafı genişliği */
-        height: 100px; /* Küçültülmüş profil fotoğrafı yüksekliği */
-        margin: 0 auto; /* Ortalar */
-        border-radius: 50%; /* Yuvarlak yapar */
-        background-color: #ffffff; /* Arka plan rengi */
-        display: flex; /* Flexbox düzeni */
-        align-items: center; /* Ortalar */
-        justify-content: center; /* Ortalar */
-        overflow: hidden; /* Taşmayı gizler */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Gölgeler */
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 50%; /* Tam yuvarlak yapar */
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
     .left .profile-wrapper img {
-        width: 100%; /* Genişlik */
-        height: 100%; /* Yükseklik */
-        border-radius: 50%; /* Yuvarlak yapar */
-        object-fit: cover; /* Resmi kesmeden sığdırır */
+        width: 100%; /* Genişlik tam olarak kapsayıcıya uyum sağlar */
+        height: 100%; /* Yükseklik tam olarak kapsayıcıya uyum sağlar */
+        border-radius: 50%; /* Resmi de yuvarlak yapar */
+        object-fit: cover; /* Resmi kapsayıcıya sığdırır */
     }
 
+
     .left.small .profile-icon {
-        left: 50%; /* Orta yatay konum */
-        top: 50%; /* Orta dikey konum */
+        left:5%; /* Orta yatay konum */
+        top:40%; /* Orta dikey konum */
         transform: translate(-50%, -50%); /* Ortalamak için kaydırır */
     }
 
     .left.small .social-icons {
         display: flex; /* Görünür hale getirir */
         justify-content: center; /* Ortalar */
-        margin-top: 10px; /* Üstten boşluk */
+        margin-top: 5px; /* Üstten boşluk */
     }
 
     .left.small .social-icons a {
-        font-size: 20px; /* Yazı boyutu */
+        font-size: 18px; /* Yazı boyutu */
     }
 
     .social-icons {
-        margin-top: 50px; /* Üstten boşluk */
+        margin-top: -40px; /* Üstten boşluk */
     }
 
     .right {
