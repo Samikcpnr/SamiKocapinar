@@ -6,6 +6,7 @@ body {
     background-color: #ffffff; /* Arka plan rengi */
     color: #333333; /* Yazı rengi */
     overflow: hidden; /* Sayfa taşmasını gizler */
+      -webkit-overflow-scrolling: touch; /* iOS cihazlarda pürüzsüz kaydırma */
 }
 
 /* Başlık (header) stili */
