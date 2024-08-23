@@ -50,10 +50,8 @@ body {
     transform: translateX(100%); /* Başlangıçta menü ekran dışında */
     opacity: 0; /* Opaklık başlangıçta sıfır */
     transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
-    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease; /* Efekt geçişi */
+    transition: transform 0.3s ease, padding 0.3s ease, width 0.3s ease; /* Efektler */
 }
-
-
 
 /* Menü butonuna fare ile gelindiğinde uygulanacak stil */
 .menu-toggle:hover {
@@ -68,6 +66,7 @@ body {
     top: 48px; /* Üstten 48px uzaklık */
     opacity: 1; /* Opaklık tamamen görünür */
     box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge */
+    transition: transform 0.3s ease, padding 0.3s ease, width 0.3s ease; /* Efektler */
 }
 
 /* Menü kapanırken gölge efektini azaltır */
@@ -75,6 +74,7 @@ body {
     transform: translateX(100%); /* Menü kapanırken ekran dışında olur */
     opacity: 0; /* Opaklık tamamen kaybolur */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Daha az belirgin gölge */
+    transition: transform 10s ease, padding 10s ease, width 10s ease; /* Efektler */
 }
 
 /* Menü içindeki liste stili */
@@ -230,7 +230,7 @@ body {
     justify-content: center; /* Ortalar */
     overflow: hidden; /* Taşmayı gizler */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Gölgeler */
-    
+    transition: box-shadow 0.3s ease; /* Gölge geçiş efekti */
 }
 
 /* Profil fotoğrafı içindeki resmin stili */
@@ -239,7 +239,13 @@ body {
     height: 100%; /* Yükseklik */
     border-radius: 50%; /* Yuvarlak yapar */
     object-fit: cover; /* Resmi kesmeden sığdırır */
-    animation: pulse 3s infinite; /* Animasyonu ekledik */
+    transition: transform 5s ease; /* Animasyon geçişi */
+}
+
+/* Profil fotoğrafına fare ile gelindiğinde animasyonu tetikler */
+.left .profile-wrapper:hover img {
+    transform: scale(1.1); /* Büyüme efekti */
+    animation: pulse 1s infinite; /* Pulsasyon animasyonu */
 }
 
 /* Profil bilgileri stili */
