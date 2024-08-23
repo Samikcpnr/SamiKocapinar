@@ -6,7 +6,6 @@ body {
     background-color: #ffffff; /* Arka plan rengi */
     color: #333333; /* Yazı rengi */
     overflow: hidden; /* Sayfa taşmasını gizler */
-    -webkit-overflow-scrolling: touch; /* iOS cihazlarda pürüzsüz kaydırma */
 }
 
 /* Başlık (header) stili */
@@ -42,7 +41,7 @@ body {
     top: 0; /* Üstten 0 uzaklık */
     right: 0; /* Sağdan 0 uzaklık */
     background-color: #F5F5F5; /* Arka plan rengi */
-    width: 200px; /* Genişlik */
+    width: 00px; /* Genişlik */
     height: 100%; /* Yükseklik */
     padding: 0px; /* İç boşluk */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Gölgeler */
