@@ -326,7 +326,7 @@ body {
         flex-direction: column; /* Dikey düzen */
         justify-content: center; /* Ortalar */
         transition: height 0.3s ease; /* Yükseklik geçiş efekti */
-        z-index: 1002; 
+        z-index: 1002;
     }
 
     .left.small {
@@ -361,10 +361,9 @@ body {
         animation: pulse 5s infinite; /* Animasyonu ekledik */
     }
 
-
     .left.small .profile-icon {
-        left:5%; /* Orta yatay konum */
-        top:40%; /* Orta dikey konum */
+        left: 5%; /* Orta yatay konum */
+        top: 40%; /* Orta dikey konum */
         transform: translate(-50%, -50%); /* Ortalamak için kaydırır */
     }
 
@@ -373,17 +372,6 @@ body {
         justify-content: center; /* Ortalar */
         margin-top: 5px; /* Üstten boşluk */
         transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
-
-    }
-
-    /* Sosyal medya bağlantılarına fare ile gelindiğinde uygulanacak stil */
-.social-icons a:hover {
-    color: #1565C0; /* Renk değişimi */
-    transform: scale(1.2); /* Büyüme efekti */
-}
-
-    .left.small .social-icons a {
-        font-size: 18px; /* Yazı boyutu */
     }
 
     .social-icons {
@@ -391,8 +379,20 @@ body {
         margin-top: -40px; /* Üstten boşluk */
     }
 
+    .social-icons a {
+        font-size: 18px; /* Yazı boyutu */
+    }
+
     .right {
         width: 100%; /* Genişlik */
+        padding: 10px; /* İç boşluk */
+        overflow-y: auto; /* Dikey kaydırma */
+        height: calc(100vh - 60px); /* Yükseklik */
+        box-sizing: border-box; /* Border-box model */
+        position: relative; /* Konumlandırma türü */
+        right: 0; /* Sağ kenarda konumlandırma */
+        background-color: #fff; /* Arka plan rengi */
+        z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlar */
     }
 
     .menu-toggle {
@@ -403,6 +403,11 @@ body {
         width: 80%; /* Menü genişliği */
         height: auto; /* Yükseklik */
         padding: 10px; /* İç boşluk */
+        position: fixed; /* Sabit konumlandırma */
+        top: 60px; /* Üstten 60px uzaklık */
+        left: 50%; /* Orta yatay konum */
+        transform: translateX(-50%); /* Ortalamak için kaydırır */
+        text-align: center; /* Metni ortalar */
     }
 
     .menu.open {
