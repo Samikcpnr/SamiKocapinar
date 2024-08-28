@@ -374,8 +374,8 @@ body {
         margin-top: 5px; /* Üstten boşluk */
         transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
         font-size: 10px; /* Yazı boyutu */
-         z-index: 1002; /* Diğer öğelerin üstünde görünmesini sağlar */
-    }
+         z-index: 1005; /* Diğer öğelerin üstünde görünmesini sağlar */
+    
 
     .social-icons {
         text-align: center;
