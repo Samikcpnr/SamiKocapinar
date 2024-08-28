@@ -406,7 +406,7 @@ body {
         height: auto; /* Yükseklik */
         padding: 10px; /* İç boşluk */
         position: fixed; /* Sabit konumlandırma */
-        top: 60px; /* Üstten 60px uzaklık */
+        top: 160px; /* Üstten 60px uzaklık */
         left: 50%; /* Orta yatay konum */
         transform: translateX(-50%); /* Ortalamak için kaydırır */
         text-align: center; /* Metni ortalar */
