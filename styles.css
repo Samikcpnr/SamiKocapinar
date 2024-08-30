@@ -424,7 +424,7 @@ body {
     .menu.open {
         position: fixed; /* Menü açıldığında sabit konumlandırma */
         top: 50px; /* Üstten 60px uzaklık */
-        left: 50%; /* Orta yatay konum */
+        left: 0px; /* Orta yatay konum */
         transform: translateX(-50%); /* Ortalamak için kaydırır */
         text-align: center; /* Metni ortalar */
     }
