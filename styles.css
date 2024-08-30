@@ -361,15 +361,6 @@ body {
         animation: pulse 5s infinite; /* Animasyonu ekledik */
     }
 
-
-      .left.social-icons {
-        display: flex; /* Görünür hale getirir */
-        justify-content: center; /* Ortalar */
-        margin-top: 5px; /* Üstten boşluk */
-        transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
-        font-size: 10px; /* Yazı boyutu */
-    }
-    
     .left.small .profile-icon {
         left: 3%; /* Orta yatay konum */
         top:25%; /* Orta dikey konum */
@@ -394,7 +385,7 @@ body {
     }
 
     .right {
-        width: 60%; /* Genişlik */
+        width: 100%; /* Genişlik */
         padding: 10px; /* İç boşluk */
         overflow-y: auto; /* Dikey kaydırma */
         height: calc(100vh - 60px); /* Yükseklik */
@@ -424,7 +415,7 @@ body {
     .menu.open {
         position: fixed; /* Menü açıldığında sabit konumlandırma */
         top: 50px; /* Üstten 60px uzaklık */
-        left: 0px; /* Orta yatay konum */
+        left: 50%; /* Orta yatay konum */
         transform: translateX(-50%); /* Ortalamak için kaydırır */
         text-align: center; /* Metni ortalar */
     }
