@@ -361,6 +361,15 @@ body {
         animation: pulse 5s infinite; /* Animasyonu ekledik */
     }
 
+
+      .left.social-icons {
+        display: flex; /* Görünür hale getirir */
+        justify-content: center; /* Ortalar */
+        margin-top: 5px; /* Üstten boşluk */
+        transition: color 0.3s ease, transform 0.3s ease; /* Efekt geçişi */
+        font-size: 10px; /* Yazı boyutu */
+    }
+    
     .left.small .profile-icon {
         left: 3%; /* Orta yatay konum */
         top:25%; /* Orta dikey konum */
