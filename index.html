@@ -197,7 +197,7 @@
             var profileIcon = document.getElementById('profile-icon');
             var menu = document.getElementById('menu');
             var menuToggle = document.querySelector('.menu-toggle');
-
+            var menuLinks = document.querySelectorAll('.menu a'); // Menü bağlantılarını seçiyoruz
             
             // Profil simgesine tıklama olayını ayarla
             profileIcon.addEventListener('click', function() {
@@ -225,6 +225,15 @@
 
             // Menü açma/kapama işlevini menü düğmesine bağla
             menuToggle.addEventListener('click', toggleMenu);
+
+            // Menü açma/kapama işlevini tanımla
+    function toggleMenu() {
+        if (menu.classList.contains('open')) {
+            menu.classList.remove('open'); // Menü kapanırken kaydır
+        } else {
+            menu.classList.add('open'); // Menü açılırken kaydır
+        }
+    }
 
             // Menü açıkken dışarıya tıklayınca menüyü kapatma işlevi
             document.addEventListener('click', function(event) {
