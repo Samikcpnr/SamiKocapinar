@@ -394,7 +394,7 @@ body {
     }
 
     .right {
-        width: 100%; /* Genişlik */
+        width: 60%; /* Genişlik */
         padding: 10px; /* İç boşluk */
         overflow-y: auto; /* Dikey kaydırma */
         height: calc(100vh - 60px); /* Yükseklik */
