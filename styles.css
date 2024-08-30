@@ -420,7 +420,7 @@ body {
         text-align: center; /* Metni ortalar */
     }
 
-/*    .menu.open ~ .profile-icon { */
-  /*      display: none; /* Menü açıkken profil ikonunu gizler */
-    /*}*/
+  .menu.open ~ .profile-icon { 
+        display: none; /* Menü açıkken profil ikonunu gizler 
+    }
 }
